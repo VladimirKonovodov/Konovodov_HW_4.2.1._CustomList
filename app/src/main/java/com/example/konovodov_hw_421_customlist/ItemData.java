@@ -14,7 +14,7 @@ public class ItemData {
     public ItemData(Drawable image, String title, String subtitleCategory, String subtitle, boolean checked) {
         this.image = image;
         this.title = title;
-        this.subtitleCategory    = subtitleCategory;
+        this.subtitleCategory = subtitleCategory;
         this.subtitle = subtitle;
         this.checked = checked;
     }

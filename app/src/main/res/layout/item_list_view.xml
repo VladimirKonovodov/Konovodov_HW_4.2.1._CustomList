@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
     android:padding="8dp">
 
     <!-- Параметр descendantFocusability позволяет обрабатывать onClickItem()
@@ -15,10 +15,10 @@
         android:id="@+id/icon"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
         android:layout_margin="8dp"
         android:scaleType="centerCrop"
-        android:layout_gravity="center_vertical"
-        tools:src="@mipmap/ic_launcher"/>
+        tools:src="@mipmap/ic_launcher" />
 
     <!-- tools - нужны для проектирования верстки, обычно заполяются примерами
     как это будет выглядеть, но при выполнении приложения не будут учитываться-->
@@ -26,8 +26,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <!-- layout_weight - веса, чем меньше вес, тем выше приоритет отрисовки.
         Сейчас есть более удобные контейнеры, например ConstraintLayout,
@@ -37,16 +37,17 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/textSizeTitle"
             android:ellipsize="none"
-            tools:text="Title Example"/>
+            android:textSize="@dimen/textSizeTitle"
+            tools:text="Title Example" />
+
         <TextView
             android:id="@+id/subtitleCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/textSizeTitle"
             android:ellipsize="none"
-            tools:text="subTitle Category"/>
+            android:textSize="@dimen/textSizeSubtitle"
+            tools:text="subTitle Category" />
         <!-- ellipsize - место в котором можно будет поставить "...",
         если заголовок окажется супердлинным. Может быть в начале, в середине и в конце
         Например: "Однажды я решил стать разаб..."-->
@@ -55,9 +56,9 @@
             android:id="@+id/subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/textSizeSubtitle"
             android:ellipsize="none"
-            tools:text="Subtitle Example"/>
+            android:textSize="@dimen/textSizeTitle"
+            tools:text="Subtitle Example" />
 
     </LinearLayout>
 
@@ -66,6 +67,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_weight="0"/>
+        android:layout_weight="0" />
 
 </LinearLayout>

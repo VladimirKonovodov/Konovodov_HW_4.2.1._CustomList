@@ -123,12 +123,12 @@ public class MainActivity extends AppCompatActivity {
     // Для каждого элемента мы возьмем 1 случайную картинку
     // из 5, которые мы сделали вначале.
     private void generateRandomItemData() {
-
-            adapter.addItem(new ItemData(
-                    images.get(random.nextInt(images.size())),
-                    "Hello" + adapter.getCount(), getString(R.string.subTitleCategory),
-                    "It\'s me",
-                    random.nextBoolean()));
+        adapter.addItem(new ItemData(
+                images.get(random.nextInt(images.size())),
+                getResources().getStringArray(R.array.Hello)[(adapter.getCount() * 2) % 16],
+                getString(R.string.subTitleCategory) + " " + adapter.getCount(),
+                getResources().getStringArray(R.array.Hello)[((adapter.getCount() * 2) % 16) + 1],
+                random.nextBoolean()));
 
     }
 

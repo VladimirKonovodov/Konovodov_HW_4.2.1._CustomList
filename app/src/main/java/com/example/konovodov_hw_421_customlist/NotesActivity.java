@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
-public class NotesActivity extends AppCompatActivity{
+public class NotesActivity extends AppCompatActivity {
     private EditText mInputNote;
     private Button mBtnSaveNote;
     private SharedPreferences myNoteSharedPref;
@@ -21,9 +21,6 @@ public class NotesActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
-
-        //Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        //setSupportActionBar(myToolbar);
 
         initViews();
         getDateFromSharedPref();
@@ -49,7 +46,6 @@ public class NotesActivity extends AppCompatActivity{
         mBtnSaveNote = findViewById(R.id.btnSaveNote);
 
         myNoteSharedPref = getSharedPreferences("MyNote", MODE_PRIVATE);
-
 
 
     }
